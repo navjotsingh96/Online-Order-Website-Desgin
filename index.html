@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Liefrando</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header1"><img class="backarrow_header" src="icon/arrow-89-64.png" alt="">
+            <img class="icon_header" src="icon/lieferando.svg" alt=""></div>
+        <input class="search_header" type="text" name="search_bar" id="" value="Titisee">
+        <div class="header3">
+            <img class="germany_flag" src="icon/Flag_of_Germany.svg.png" alt="">
+            <img class="menu_bar" src="icon/bars-solid.svg" alt="">
+
+            <img class="shopping_trolly d-none" onclick="open_basket()" src="icon/shopping-trolley-full.png">
+        </div>
+
+    </div>
+    <div id="mobile_dia" onclick="open_basket()" class="mobile_dialog d-none opacity_prop">
+        <div class="trolly-bg">
+            <img class="mobile_trolly" src="icon/shopping-trolley-full.png" alt="">
+        </div>
+        <div class="portion-count" id="update-trolly">
+
+        </div>
+    </div>
+    <div class="header_no2">
+        <img class="restaurnat_img" src="img/mein-rest.jpeg" alt="">
+    </div>
+    <div id="hide_logo" class="restaurnat_logo">
+        <div class="restaurant_container">
+            <div class="restaurnat_logo_inside">Beispiel Restaurant
+            </div>
+        </div>
+    </div>
+
+    <div id="basket_container" class="setting1 hide_responsvie">
+        <div class="setting2"></div>
+
+        <div class="basket_main_container" id="basket_main_cont">
+            <div class="close_btn" id="close_btn"><img class="close_img" onclick="open_basket()" src="icon/cancel.png"></div>
+            <div class="basket_name">
+                <h2>Warenkorb</h2>
+            </div>
+            <div>
+                <div class="basket_items" id="basket_id">
+
+                    <img id="basket_none" src="icon/shopping-basket-64.png" alt="">
+                    <span id="basket_item1"> Wähle leckere Gerichte aus der Karte und bestelle dein Menü.</span>
+                    <span id="basket_item"></span>
+
+                </div>
+                <div class="basket_price">
+                    <div class="liefer_container">
+                        <div><span id="middel_sum">Zwischensumme</span>
+                        </div>
+                        <div>
+                            <span id="price1">0,00</span> €
+                        </div>
+                    </div>
+                    <div class="liefer_container">
+                        <div>
+                            <span id="liefer_kosten">Lieferkosten</span></div>
+                        <div>
+                            <span id="del_kosten">0,00 €</span>
+                        </div>
+                    </div>
+                    <div class="liefer_container">
+                        <div><span id="total">Gesamt</span></div>
+                        <div>
+                            <span id="total_price">0,00€</span></div>
+                    </div>
+                </div>
+                <div id="liefer_from" class="liefer_possible">Die Lieferung ist ab 25,00 € kostenlos</div>
+                <div class="liefer_possible"><span id="possibility">Das Mindestbestellwert ist 15,00 €</span>
+                </div>
+                <div class="order_button"><button class="to_order" id="to-order">Bestellen</button></div>
+            </div>
+        </div>
+    </div>
+    <!--End basket -->
+    <!--Start Rest. Name-->
+    <div class="restaurant_name">
+        <h1>Mein Restaurant</h1>
+        <div class="rating_stars">
+            <img class="rating_star" src="icon/star-5-64.png" alt="">
+            <img class="rating_star" src="icon/star-5-64.png" alt="">
+            <img class="rating_star" src="icon/star-5-64.png" alt="">
+            <img class="rating_star" src="icon/star-5-64.png" alt="">
+            <img class="rating_star" src="icon/star-5-64.png" alt="">(Noch keine Bewertung)
+        </div>
+        <div class="warrning">
+            <b><u> Beachten Sie,</u> dass Getränke, Shakes, Eis und Desserts nicht 
+                zu unserem Mindestbestellwert gehören. </b>
+
+        </div>
+    </div>
+    <!--end Rest. Name rating-->
+    <!--Start food_ links-->
+    <div class="food_links">
+        <a href="#beliebte">Beliebte Gerichte</a>
+        <a href="#pizza">Pizza</a>
+        <a href="#dönner_pizza">Dönner Pizza</a>
+
+
+    </div>
+    <!--end food_ links-->
+
+    <!--Start food-->
+    <div class="food_container">
+        <h2 class="items">Beliebte Gerichte</h2>
+
+        <img class="restaurnat_img_2" src="img/mein-rest.jpeg" alt="">
+    </div>
+    <div class="food_item" id="food beliebte">
+        <div class="food_items">
+            <h3>Tonkasu Ramen' Chicken</h3> Mit Hähnchenfleisch <br> <br> 11,95€
+            <button class="food_btn" id="add_to_basket" onclick="addtoBasket('Tonkasu Ramen(Chicken)', 11.95, 1),updateBasket()">
+                +</button></div>
+    </div>
+    </div>
+    <div class="food_item" id="food1">
+        <div class="food_items">
+            <h3><span id="test_food">Tonkasu Ramen' Beef</span></h3> Mit leckerem Rindfleisch <br>12,95€
+            <button class="food_btn" id="add_to_basket" onclick="addtoBasket('Tonkasu Ramen(Beef)', 12.95, 1), updateBasket()">
+                +</button></div>
+
+    </div>
+    <div class="food_item" id="food1">
+        <div class="food_items">
+            <h3><span id="test_food">Tonkasu Ramen' Schrimp</span></h3> Mit leckerem Garnelen <br>13,95€
+            <button class="food_btn" id="add_to_basket" onclick="addtoBasket('Tonkasu Ramen(Schrimp)', 13.95, 1), updateBasket()">
+                +</button></div>
+
+    </div>
+    <div class="food_container">
+        <h2 class="items" id="pizza">Pizza</h2>
+    </div>
+    <div class="food_item" id="food1">
+        <div class="food_items">
+            <h3><span id="test_food">Pizza Margherita
+                   </span></h3> <br> 7,00 €
+            <button class="food_btn" id="add_to_basket" onclick="addtoBasket('Pizza Margherita', 7.00, 1), updateBasket()">
+                    +</button></div>
+
+    </div>
+    <div class="food_item" id="food1">
+        <div class="food_items">
+            <h3><span id="test_food">Pizza Schinken
+                   </span></h3> <br> 8,50 €
+            <button class="food_btn" id="add_to_basket" onclick="addtoBasket('Pizza Schinken', 8.50, 1), updateBasket()">
+                    +</button></div>
+
+    </div>
+    <div class="food_item" id="food1">
+        <div class="food_items">
+            <h3><span id="test_food">Pizza Funghi
+               </span></h3> mit frischen Champignons <br> <br> 8,50 €
+            <button class="food_btn" id="add_to_basket" onclick="addtoBasket('Pizza Funghi', 8.50, 1), updateBasket()">
+                +</button></div>
+
+    </div>
+    <div class="food_item" id="food1">
+        <div class="food_items">
+            <h3><span id="test_food">Pizza Bravo
+           </span></h3> mit Putenschinken und Champignons <br> <br> 10,00 €
+            <button class="food_btn" id="add_to_basket" onclick="addtoBasket('Pizza Bravo', 10.00, 1), updateBasket()">
+            +</button></div>
+
+    </div>
+    <div class="food_container">
+        <h2 class="items" id="dönner_pizza">Dönner Pizza</h2>
+    </div>
+    <div class="food_item" id="food1">
+        <div class="food_items">
+            <h3><span id="test_food">Dönerpizza mit Paprika und Zwiebeln
+           </span></h3> <br> 10,00 €
+            <button class="food_btn" id="add_to_basket" onclick="addtoBasket('Dönerpizza mit Paprika und Zwiebeln', 10.00, 1), updateBasket()">
+            +</button></div>
+
+    </div>
+    <div class="food_item" id="food1">
+        <div class="food_items">
+            <h3><span id="test_food">Dönerpizza Sucuk 
+           </span></h3> mit Hähnchen- und Putenfleisch <br> <br> 10,50 €
+            <button class="food_btn" id="add_to_basket" onclick="addtoBasket('Dönerpizza Sucuk', 10.50, 1), updateBasket()">
+            +</button></div>
+    </div>
+    <div class="food_item" id="food1">
+        <div class="food_items">
+            <h3><span id="test_food">Dönerpizza milde Peperoni
+           </span></h3> mit frische Tomaten, Knoblauch und Zwiebeln <br> <br> 10,50 €
+            <button class="food_btn" id="add_to_basket" onclick="addtoBasket('Dönerpizza milde Peperoni', 10.50, 1), updateBasket()">
+            +</button></div>
+    </div>
+
+    <!--Footer-->
+    <div class="footer">
+        <div class="text_footer">
+            <div class="text_footer1">Kontakt</div>
+            <div class="text_footer2">Impressum</div>
+        </div>
+        <div class="media"><img src="icon/facebook-48.png" alt=""></div>
+        <div class="media"><img src="icon/instagram-5-48.png" alt=""></div>
+        <div class="media"><img src="icon/youtube-5-48.png" alt=""></div>
+        <div class="media"><img src="icon/twitter-5-48.png" alt=""></div>
+    </div>
+    </div>
+
+</body>
+
+</html>

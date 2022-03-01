@@ -1,0 +1,663 @@
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'Luxurious Roman', cursive;
+}
+
+.header {
+    height: 72px;
+    background-color: #f86600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header div {
+    margin: 20px 20px 20px 20px;
+}
+
+.header img {
+    height: 20px;
+    width: 20px;
+}
+
+.header1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* .header3 {
+    position: relative;
+}
+
+.basketcount {
+    background-color: red;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    position: absolute;
+    top: -28px;
+    right: -35px;
+    bottom: 0;
+    text-align: center;
+} */
+
+.backarrow_header {
+    cursor: pointer;
+}
+
+.icon_header {
+    height: 40px !important;
+    width: 100% !important;
+}
+
+.germany_flag {
+    border: 4px white solid;
+    border-radius: 80%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.menu_bar,
+.shopping_trolly {
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.shopping_trolly {
+    display: none;
+}
+
+.search_header {
+    border: none;
+    color: white;
+    background-color: #f86600;
+    border-bottom: 2px white solid;
+    outline: none;
+    text-align: center;
+    width: 50px;
+}
+
+.search_header::placeholder {
+    color: white;
+}
+
+.logo {
+    margin-left: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Hier endet header 1*/
+
+.restaurnat_img {
+    width: 100vw;
+    height: 200px;
+    object-fit: cover;
+    object-position: 0 70%;
+}
+
+.restaurnat_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 80vw;
+}
+
+.restaurant_container {
+    height: 107px;
+    width: 107px;
+    top: -53px;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+}
+
+.restaurnat_logo_inside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #d7d7d7;
+    background: #fff;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    left: -50%;
+    position: relative;
+}
+
+
+/* Hier endet header 2*/
+
+.basket_main_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    height: auto;
+    top: 71px;
+    overflow-x: scroll;
+    left: 822px;
+    box-shadow: 0px 20px 19px 6px lightgrey;
+    border-top: none;
+}
+
+.basket_name {
+    border-bottom: 1px solid black;
+    width: 85%;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.basket_items {
+    border-bottom: 1px solid black;
+    text-align: center;
+    min-height: 100px;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-height: 225px;
+    height: auto;
+    margin: 10px;
+}
+
+.food_cont {
+    width: 160px;
+}
+
+.plus_cont,
+.minus_cont {
+    width: 25px;
+}
+
+.price_cont {
+    width: 70px;
+}
+
+.mobile_dialog {
+    right: 0px;
+    bottom: 30px;
+    display: none;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    transition: all 225ms ease-in-out;
+    cursor: pointer;
+    animation: trolly 225ms ease-in-out;
+}
+
+.trolly-bg {
+    background-color: #f86500;
+    border-radius: 100%;
+    padding: 12px;
+}
+
+.opacity_prop {
+    opacity: 0.5;
+    transition: all 225ms ease-in-out;
+}
+
+.basket_price {
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.setting1 {
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    position: absolute;
+    top: 72px;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    animation: trolly 225ms ease-in-out;
+}
+
+#middel_sum {
+    margin-left: 0px;
+    text-align: center;
+}
+
+.liefer_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+/* .liefer_container div {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+ */
+
+
+/* #liefer_kosten {
+    margin-left: 0px;
+    margin-right: 150px;
+    text-align: center;
+}
+ */
+
+
+/* #total {
+    margin-left: -25px;
+    margin-right: 135px;
+    padding: 20px;
+    text-align: center;
+}
+
+#total_price {
+    margin-left: 25px;
+} */
+
+.basket_price div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.liefer_possible {
+    text-align: center;
+    margin: 20px;
+}
+
+.to_order {
+    margin: 20px;
+    width: 320px;
+    height: 70px;
+    padding: 15px;
+    background-color: #66605c;
+    border: none;
+    cursor: not-allowed;
+}
+
+.allow_click {
+    cursor: pointer;
+    margin: 20px;
+    width: 320px;
+    height: 70px;
+    padding: 15px;
+    background-color: #f59958;
+    border: none;
+}
+
+.allow_click:hover,
+.allow_click:focus {
+    background-color: #fd822b;
+    box-shadow: 0 0 8px 0 #473b33;
+}
+
+.amount_cont {
+    width: 20px;
+}
+
+.order_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-none {
+    display: none;
+    /*  animation: d_none 225ms ease-in-out; */
+}
+
+@keyframes trolly {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Hier endet Warenkorb*/
+
+
+/* Hier mobile warenkorb 2*/
+
+
+/* Hier <<<<<<startet  header 3 */
+
+.restaurant_name {
+    margin: 60px 200px 60px 200px;
+    width: 60vw;
+}
+
+.items {
+    background-color: rgb(241, 241, 241);
+}
+
+.rating_stars {
+    display: flex;
+    align-items: center;
+}
+
+.rating_star {
+    width: 20px;
+}
+
+.warrning {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.food_links {
+    margin: 60px 200px 60px 200px;
+    background-color: lightgray;
+    width: 65vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: scroll;
+}
+
+.food_links a {
+    text-decoration: none;
+    color: black;
+    margin: 20px
+}
+
+
+/* Hier <<<<<<endet  header 3 */
+
+
+/* Hier <<<<<<startet  food-container*/
+
+.food_container {
+    margin: 60px 200px 60px 200px;
+    width: 65vw;
+}
+
+h2 {
+    padding: 10px;
+}
+
+.restaurnat_img_2 {
+    width: 65vw;
+    height: 200px;
+    object-fit: cover;
+}
+
+.food_item {
+    border: 1px solid grey;
+    width: 65vw;
+    margin: 60px 200px 60px 200px;
+    position: relative;
+    height: 150px;
+}
+
+.food_item:hover {
+    transition: all 225ms ease-in-out;
+    box-shadow: 0px 0px 2px 3px #a3a3a3;
+}
+
+.food_btn {
+    border: none;
+    padding: 10px;
+    width: 70px;
+    font-size: 23px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+}
+
+.food_btn:hover {
+    background-color: lightgray;
+}
+
+.delete_icon {
+    width: 17px !important;
+    cursor: pointer;
+    height: 26px;
+    object-fit: contain;
+    margin: 10px;
+}
+
+.plus_btn {
+    margin-right: 10px;
+}
+
+.minus_btn {
+    margin-right: 10px;
+}
+
+.food_items {
+    margin: 20px;
+}
+
+
+/* Footeer start */
+
+.footer {
+    width: 100vw;
+    height: 15vh;
+    background-color: rgb(3, 40, 54);
+    z-index: 3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+
+.media {
+    margin: 20px 20px 20px 20px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    border: 2px transparent rgb(84, 84, 252);
+    cursor: pointer;
+}
+
+.media:hover {
+    border: 2px solid rgb(84, 84, 252);
+}
+
+.text_footer {
+    color: white;
+    position: absolute;
+    top: 0px;
+    margin: 20px;
+    text-align: center;
+}
+
+.text_footer div {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.mobile_trolly {
+    width: 40px;
+    height: 40px;
+}
+
+.portion-count {
+    position: absolute;
+}
+
+.close_btn {
+    position: relative;
+    display: none;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.close_img {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 25px;
+    width: 30px;
+}
+
+
+/* Hier startet mobile Warenkorb*/
+
+@media (max-width: 1550px) {
+    .restaurant_name,
+    .food_links,
+    .food_container,
+    .food_item {
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .hide_responsvie {
+        /*  display: none; */
+        animation: hide_ani 225ms ease-in-out;
+    }
+    @keyframes hide_ani {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .header {
+        position: fixed;
+        width: 100vw;
+    }
+    .close_btn,
+    .mobile_dialog {
+        display: flex;
+    }
+    .shopping_trolly {
+        display: inline;
+    }
+    .menu_bar {
+        display: none;
+    }
+    .restaurnat_img_2 {
+        width: 90vw;
+    }
+    .restaurant_name,
+    .food_links,
+    .food_container,
+    .food_item {
+        width: 90vw;
+        margin: 40px 40px 40px 40px;
+    }
+}
+
+@keyframes d_none {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        overflow-x: hidden;
+    }
+    .setting1 {
+        height: 100vh;
+    }
+    .hide_logos {
+        display: none;
+    }
+    .basket_main_container {
+        width: 100vw;
+        height: 100vh;
+    }
+    .restaurant_name {
+        margin: 60px 20px 20px 20px;
+        width: 90vw;
+    }
+    .food_links {
+        margin: 20px;
+        width: 90vw;
+    }
+    .food_container {
+        margin: 20px;
+        width: 90%;
+    }
+    .restaurnat_img_2 {
+        width: 100% !important;
+    }
+    .food_item {
+        margin: 20px;
+        width: 90vw;
+    }
+    .food_button {
+        width: 2px;
+        left: 83%;
+    }
+    .restaurnat_logo {
+        width: 100%;
+    }
+}
+
+@media (max-width: 710px) {
+    body {
+        overflow-x: hidden;
+    }
+    .hide_logos {
+        display: none;
+    }
+}
+
+@media (max-width: 710px) {
+    body {
+        overflow-x: hidden;
+    }
+    .setting1 {
+        height: 100vh;
+    }
+    .icon_3 {
+        height: 30px !important;
+    }
+    .basket_main_container {
+        width: 100vw;
+        height: 100vh;
+    }
+    .order_button {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer {
+        height: 20vh;
+    }
+    .germany_flag {
+        margin: 0;
+    }
+}
+
+@media( max-width: 350px) {
+    body {
+        overflow-x: hidden;
+    }
+    .restaurant_name {
+        margin: 0px !important;
+    }
+}
